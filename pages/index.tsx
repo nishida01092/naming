@@ -15,7 +15,7 @@ export default function Home() {
         <meta charSet="utf-8" />
       </Head>
       <div id="naming">
-        <header><h1></h1></header>
+        <header><h1>新キャラクター登場！</h1></header>
         <main>
           <section className="top">
             <Image
@@ -46,35 +46,39 @@ export default function Home() {
                     33vw"
               alt=""
             />
-            <h2></h2>
-            <p></p>
+            <h2>仲間が増えれば<br/>今日はもっとワクワク！</h2>
+            <p>シテモイに新しい仲間が来てくれた！<br />
+               なんて呼べばいいかな。<br />
+               「いっせーのーで」で言うよ。<br />
+               みんな、準備はいいかい？ 
+            </p>
           </section>
           <section className="schedule">
-            <h2></h2>
+            <h2>スケジュール</h2>
             <dl>
-              <dt></dt>
-              <dd></dd>
-              <dd></dd>
+              <dt>日程</dt>
+              <dd>４月９日（日）１１：００から</dd>
+              <dd>５月７日（日）１２：００から</dd>
             </dl>
             <dl>
-              <dt></dt>
+              <dt>速報／発表</dt>
               <dd>
                 <dl>
-                  <dt></dt>
-                  <dd></dd>
+                  <dt>候補発表</dt>
+                  <dd>２０２３年４月２２日（土）</dd>
                 </dl>
               </dd>
               <dd>
                 <dl>
-                  <dt></dt>
-                  <dd></dd>
-                  </dl>
+                  <dt>結果発表</dt>
+                  <dd>２０２３年５月７日（日）</dd>
+                </dl>
               </dd>
             </dl>
           </section>
           <section className="posting">
-            <h2>応募はここから</h2>
-            <p></p>
+            <h2>応募はここから！</h2>
+            <p>もうちょっとだけ待っててね！</p>
           </section>
         </main>
         <footer></footer>
