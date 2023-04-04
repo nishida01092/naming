@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Tooltip from '../components/elements/Tooltip'
 
 export default function Home() {
   return (
@@ -18,36 +15,37 @@ export default function Home() {
         <header><h1>新キャラクター登場！</h1></header>
         <main>
           <section className="top">
-            <Image
+            {/* <Image
               src=""
               fill
               sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
                     33vw"
               alt=""
-            />
+            /> */}
           </section>
           <section className="banner">
-            <Image
+            {/* <Image
               src=""
               fill
               sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
                     33vw"
               alt=""
-            />
+            /> */}
           </section>
           <section className="notice">
-            <Image
+            {/* <Image
               src=""
               fill
               sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
                     33vw"
               alt=""
-            />
+            /> */}
             <h2>仲間が増えれば<br/>今日はもっとワクワク！</h2>
-            <p>シテモイに新しい仲間が来てくれた！<br />
+            <Tooltip id={1} />
+            <p>シテモイ<span id="1" className="tooltip" onClick={()=>{openTooltip(1)}}>?</span>に新しい仲間が来てくれた！<br />
                なんて呼べばいいかな。<br />
                「いっせーのーで」で言うよ。<br />
                みんな、準備はいいかい？ 

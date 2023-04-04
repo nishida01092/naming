@@ -1,18 +1,72 @@
 {
-    "tooltip": [
-      {
-        "id": "uid1",
-        "word": "JIN",
-        "description":"シテモイとはこの子たちが住んでる世界のこと。",
-        "feedback":["うん","いい"]
-      },
-      {
-        "id": "uid2",
-        "name": "SUGA"
-      },
-      {
-        "id": "uid3",
-        "name": "J-HOPE"
-      }
-    ]
-  }
+  "tooltip": [
+    {
+      "id": 1,
+      "word": "シテモイとは",
+      "description": "シテモイとはこの子たちが住んでる世界のこと。",
+      "asking": "もっと知りたいですか",
+      "feedback": [
+        {
+          "feedback_id": 1,
+          "feedback_name": "うん"
+        },
+        {
+          "feedback_id": 2,
+          "feedback_name": "いい"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "word": "スケジュール",
+      "description": "候補発表の後、本選考に移ります",
+      "asking": "もっと知りたいですか",
+      "feedback": [
+        {
+          "feedback_id": 3,
+          "feedback_name": "はい"
+        },
+        {
+          "feedback_id": 4,
+          "feedback_name": "いいえ"
+        }
+      ]
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "feedback_id": "1",
+      "id": 10
+    },
+    {
+      "feedback_id": "2",
+      "id": 11
+    },
+    {
+      "feedback_id": "1",
+      "id": 12
+    },
+    {
+      "feedback_id": "1",
+      "id": 13
+    },
+    {
+      "feedback_id": "2",
+      "id": 14
+    },
+    {
+      "feedback_id": "2",
+      "id": 15
+    }
+  ]
+}
