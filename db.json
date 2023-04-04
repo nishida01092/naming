@@ -1,16 +1,36 @@
 {
-    "tooltip": [
-      {
-        "id": 3,
-        "word": "シテモイとは",
-        "description":"シテモイとはこの子たちが住んでる世界のこと。",
-        "feedback":[{"1":"はい"},{"2":"いいえ"}]
-      },
-      {
-        "id": 5,
-        "word": "スケジュール",
-        "description":"候補発表の後、本選考に移ります",
-        "feedback":[{"4":"わかった"},{"6":"わかりにくい"}]
-      }
-    ]
-  }
+  "tooltip": [
+    {
+      "id": 1,
+      "word": "シテモイとは",
+      "description": "シテモイとはこの子たちが住んでる世界のこと。",
+      "asking":"もっと知りたいですか",
+      "feedback": [
+        {
+          "feedback_id":1,  
+          "feedback_name": "うん"
+        },
+        {
+          "feedback_id":2,  
+          "feedback_name": "いい"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "word": "スケジュール",
+      "description": "候補発表の後、本選考に移ります",
+      "asking":"もっと知りたいですか",
+      "feedback": [
+        {
+          "feedback_id":3,  
+          "feedback_name": "はい"
+        },
+        {
+          "feedback_id":4,  
+          "feedback_name": "いいえ"
+        }
+      ]
+    }
+  ]
+}

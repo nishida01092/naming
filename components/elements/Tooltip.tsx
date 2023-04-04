@@ -1,31 +1,46 @@
 // components/Button.tsx
-
 import {css} from "@emotion/css";
+import axios,{AxiosRequestConfig} from "axios";
+import { useState,useEffect } from "react";
 
-const style = css`
-  background-color: #4caf50;
-  color: white;
-  padding: 0.5em 1em;
-  border: none;
-  border-radius: 0.3em;
-  cursor: pointer;
-  &:hover {
-    background-color: #3e8e41;
-  }
-`;
+type Tooltip = {
+    id:number;
+    word:string;
+    description:string;
+    asking: string;
+    feedback:{
+        feedback_name: string | number | readonly string[] | undefined;key: string
+}[];
+}
+type Props = {
+    id:number;
+}
+const options:AxiosRequestConfig ={
+    url:"http://localhost:3100/tooltip",
+    method:"GET"
+}
 
-function Tooltip(){
+function Tooltip(props:Props){
+    const [tooltip,setTooltip] = useState<Tooltip[]>([]);
+    useEffect(() => {
+        axios(options)
+        .then(response => setTooltip(response.data))
+        .catch();
+    }, []);
+    const pallet = tooltip[tooltip.findIndex(data => data.id === props.id)];
+    console.log(pallet)
+    if(pallet == undefined){return <></>;}
+
     return(
         <div>
             <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>{pallet.word}</dt>
+                <dd>{pallet.description}</dd>
             </dl>
             <div>
-                <p></p>
+                <p>{pallet.asking}</p>
                 <form action="">
-                    <input type="text" />
-                    <input type="text" />
+                    {pallet.feedback.map((object)=><input value={object.feedback_name}/>)}
                 </form>
             </div>
         </div>
