@@ -1,18 +1,16 @@
 {
     "tooltip": [
       {
-        "id": "uid1",
-        "word": "JIN",
+        "id": 3,
+        "word": "シテモイとは",
         "description":"シテモイとはこの子たちが住んでる世界のこと。",
-        "feedback":["うん","いい"]
+        "feedback":[{"1":"はい"},{"2":"いいえ"}]
       },
       {
-        "id": "uid2",
-        "name": "SUGA"
-      },
-      {
-        "id": "uid3",
-        "name": "J-HOPE"
+        "id": 5,
+        "word": "スケジュール",
+        "description":"候補発表の後、本選考に移ります",
+        "feedback":[{"4":"わかった"},{"6":"わかりにくい"}]
       }
     ]
   }
