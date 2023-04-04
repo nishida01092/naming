@@ -1,0 +1,18 @@
+{
+    "tooltip": [
+      {
+        "id": "uid1",
+        "word": "JIN",
+        "description":"シテモイとはこの子たちが住んでる世界のこと。",
+        "feedback":["うん","いい"]
+      },
+      {
+        "id": "uid2",
+        "name": "SUGA"
+      },
+      {
+        "id": "uid3",
+        "name": "J-HOPE"
+      }
+    ]
+  }
