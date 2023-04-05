@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'genzyu';
+    src: url('../public/fonts/GenJyuuGothic-Regular.ttf') format('truetype');
+    }
+#naming{
+    font-family: "genzyu";
+}
