@@ -15,24 +15,20 @@ export default function Home() {
         <header><h1>新キャラクター登場！</h1></header>
         <main>
           <section className="top">
-            {/* <Image
-              src=""
-              fill
-              sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
-                    33vw"
+            <Image
+              src="/../public/img_top.png"
+              width={375}
+              height={451}
               alt=""
-            /> */}
+            />
           </section>
           <section className="banner">
-            {/* <Image
-              src=""
-              fill
-              sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
-                    33vw"
+            <Image
+              src="/../public/img_banner01.png"
+              width={282}
+              height={79}
               alt=""
-            /> */}
+            />
           </section>
           <section className="notice">
             {/* <Image
@@ -44,7 +40,7 @@ export default function Home() {
               alt=""
             /> */}
             <h2>仲間が増えれば<br/>今日はもっとワクワク！</h2>
-            <Tooltip id={1} />
+            {/* <Tooltip id={1} /> */}
             <p>シテモイ<span id="1" className="tooltip" onClick={()=>{openTooltip(1)}}>?</span>に新しい仲間が来てくれた！<br />
                なんて呼べばいいかな。<br />
                「いっせーのーで」で言うよ。<br />
