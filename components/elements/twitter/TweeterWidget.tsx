@@ -1,13 +1,6 @@
 import React, { useEffect } from "react";
 
 export const TwitterWidget = () => {
-//   useEffect(() => {
-//     const script = document.createElement("script");
-//     script.setAttribute("src", "https://platform.twitter.com/widgets.js");
-//     script.setAttribute("async", "true");
-//     document.body.appendChild(script);
-//   }, []);
-
   return (
     <blockquote className="twitter-tweet" data-theme="dark">
         <p lang="ja" dir="ltr">この子の名前を募集中です！<br/>コメント欄から応募してください！ 
