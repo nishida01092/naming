@@ -2,6 +2,156 @@
     font-family: 'genzyu';
     src: url('../public/fonts/GenJyuuGothic-Regular.ttf') format('truetype');
     }
-#naming{
-    font-family: "genzyu";
+body{
+    letter-spacing: 0.1rem;
+    font-size:1.9rem;
 }
+.naming{
+    font-family: "genzyu";
+    width:100vw;
+    margin:0 auto;
+    background-color: #fff;
+}
+img{
+    margin:0 auto;
+    text-align: center;
+}
+h1{
+    font-size:3.6rem;
+}
+h2{
+    font-size:3.2rem;
+    margin:0 0 30px 0;
+}
+p{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+section>dl{
+    padding:0 0 15px 0;
+}
+section>dl>dt{
+    font-size: 1.6rem;
+    line-height: 3.0rem;
+    padding:0 0 5px 0;
+}
+section>dl>dd{
+    font-size:1.9rem;
+    line-height: 3.0rem;
+}
+section>dl>dd>dl{
+    display: flex;
+    justify-content: space-between;
+}
+section>dl>dd>dl>dt{
+    flex: 0.5;
+    color:red;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+section>dl>dd>dl>dd{
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    
+}
+.naming h1{
+    letter-spacing: 0;
+    font-size:2.0rem;
+    font-weight:900;
+    background: linear-gradient(to bottom, #ff0077, #ff6200 ); /* グラデーションの設定 */
+    -webkit-background-clip: text; /* Webkitブラウザ用の設定 */
+    background-clip: text; /* その他のブラウザ用の設定 */
+    color: transparent; /* 文字色を透明に設定 */
+    text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+    padding:5px 0;
+}
+.naming header{
+    text-align: center;
+    background-color: #BDFFFF;
+}
+.naming .top img{
+    margin:0 0 12px 0;
+}
+.naming .banner{
+    text-align: center;
+}
+.naming .banner img{
+    margin:0 0 86px 0;
+}
+.naming .notice,
+.naming .schedule,
+.naming .posting{
+    position: relative;
+    margin:0 15px 40px;
+    padding: 30px 18px;
+    text-shadow: 2px 2px 20px #fff, -2px -2px 1px #fff, 2px 1px 1px #fff, -2px -1px 1px #fff, 2px 0 1px #fff, -2px 0 1px #fff, 2px -1px 1px #fff, -2px 1px 1px #fff, 1px 2px 1px #fff, -1px -2px 1px #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, 1px 0 1px #fff, -1px 0 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px -2px 1px #fff, -1px 2px 1px #fff, 0 -2px 1px #fff, 0 2px 1px #fff, 0 -1px 1px #fff, 0 1px 1px #fff;
+}
+.naming .notice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding:150px 18px  20px 18px;
+    text-align:center;
+    background-color: #FFF7A3;
+    background-image:
+    repeating-linear-gradient(-45deg,
+    #fffad6, #fffad6 10px,
+    transparent 0, transparent 20px);
+    margin:0 15px 40px;
+   /* clip-path: polygon(0 0,100% 0,100% 100%,0 300px,0 100%); */
+}
+.naming .notice h2{
+    font-weight: 900;
+    color:#ff6200;
+}
+.naming .notice p{
+    padding:0 0 50px 0;
+}
+.naming .notice img{
+    position:absolute;
+    top:-110px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.naming .schedule{
+    background-color:#F77974;
+    background-image:
+        linear-gradient(-90deg, #ffa09d 10%, transparent 10%),
+        linear-gradient(#ffa09d 10%, transparent 10%);
+    background-size: 15px 15px;
+}
+.naming .posting{
+    background-color:#BDFFFF;
+    background-image:
+    radial-gradient(#dffffd 20%, transparent 20%),
+    radial-gradient(#dffffd 20%, transparent 20%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+footer{
+    height:200px;
+    background-color:#BDFFFF ;
+    clip-path: polygon(0 0,100% 20px,100% 100%,0 100%,0 100%);
+}
+.tipIcon{
+    font-size:1.6rem;
+    display: inline-block;
+    background-color: #dffffd;
+    width: 2.5rem;
+    line-height: 1.5em; 
+    text-align: center;  
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* h2 .tipIcon{
+    display: inline-block;
+    background-color: #dffffd;
+    width: 4rem;
+    line-height: 1.5em; 
+    text-align: center;  
+    border-radius: 50%;
+    cursor: pointer;
+} */
