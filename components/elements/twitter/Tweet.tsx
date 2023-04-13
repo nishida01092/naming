@@ -5,7 +5,6 @@ const DynamicTwitterWidget = dynamic<{}>(
   () => import("./TweeterWidget").then((module) => module.TwitterWidget),
   { ssr: false }
 );
-
 export const Tweet = () => {
   return (
     <>

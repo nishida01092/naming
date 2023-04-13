@@ -85,7 +85,7 @@ export default function Home() {
           </section>
         </main>
         <footer>
-
+          <p><a href="https://portfolio01092.vercel.app/">&copy;Akira Nishida</a></p>
         </footer>
       </div>
     </>

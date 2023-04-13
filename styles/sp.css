@@ -135,6 +135,9 @@ footer{
     height:200px;
     background-color:#BDFFFF ;
     clip-path: polygon(0 0,100% 20px,100% 100%,0 100%,0 100%);
+    text-align: center;
+    padding:100px 0 0 0;
+
 }
 .tipIcon{
     font-size:1.6rem;
@@ -146,6 +149,7 @@ footer{
     border-radius: 50%;
     cursor: pointer;
 }
+
 /* h2 .tipIcon{
     display: inline-block;
     background-color: #dffffd;
