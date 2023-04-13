@@ -1,9 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Tooltip from '../components/elements/Tooltip'
+import {Tooltip} from '../components/elements/tooltip/Tooltip'
+import { useState } from 'react'
 import { Tweet } from '@/components/elements/twitter/Tweet'
 
 export default function Home() {
+  const showTooltip = (tooltipId:number)=>{
+    const elem = document.querySelector(`.tooltip${tooltipId}`);
+    if(elem){elem.style.display="block"}
+  }
+
   return (
     <>
       <Head>
@@ -40,15 +46,18 @@ export default function Home() {
               alt="unknown"
             />
             <h2>仲間が増えれば<br/>今日は<br/>もっとワクワク！</h2>
-            <Tooltip tooltipId={1} />
-            <p>シテモイ<span id="1" className="tipIcon" onClick={showTooltip}>?</span>に<br/>新しい仲間が来てくれた！<br />
+            <Tooltip tooltipId={1}/>
+            <p>シテモイ<span id="tip1" className="tipIcon" onClick={()=>showTooltip(1)}>?</span>に<br/>新しい仲間が来てくれた！<br />
                なんて呼べばいいかな。<br />
                「いっせーのーで」で言うよ。<br />
                みんな、準備はいいかい？ 
             </p>
           </section>
           <section className="schedule">
-            <h2>スケジュール</h2>
+            <h2>スケジュール<span id="2" className="tipIcon" onClick={()=>showTooltip(2)}>?</span></h2>
+            <div className="tooltipWrap">
+              <Tooltip tooltipId={2}/>
+            </div>
             <dl>
               <dt>募集期間</dt>
               <dd>４月９日（日）１１：００から</dd>

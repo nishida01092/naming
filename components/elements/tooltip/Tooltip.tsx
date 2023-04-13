@@ -1,5 +1,3 @@
-// components/Button.tsx
-import {css} from "@emotion/react";
 import axios,{AxiosRequestConfig} from "axios";
 import { useState,useEffect } from "react";
 import { API_URL } from "@/config/config";
@@ -11,7 +9,8 @@ type Tooltip = {
     asking: string;
     feedbacks:{
         feedback_id: number;
-        feedback_name: string | readonly string[] ;key: string
+        feedback_name: string | readonly string[] ;
+        key: string
 }[];
 }
 type Props = {
@@ -26,50 +25,33 @@ const POSTOPTION:AxiosRequestConfig ={
     method:"POST"
 }
 
-const useTooltip = () => {
-    const [isVisible, setIsVisible] = useState(false);
-  
-    const showTooltip = () => {
-      console.log("click")
-      setIsVisible(true);
-    };
-  
-    const hideTooltip = () => {
-      setIsVisible(false);
-    };
-  
-    return {
-      isVisible,
-      showTooltip,
-      hideTooltip
-    };
-  }
-function Tooltip(props:Props){
-    
-    const { isVisible, showTooltip, hideTooltip } = useTooltip();
+export function Tooltip(props:Props){
+    const tooltipId:number = props.tooltipId;
+    //ツールチップAPIを叩いて、ツールチップを生成する。
     const [tooltip,setTooltip] = useState<Tooltip[]>([]);
     useEffect(() => {
         axios(GETOPTION)
         .then(response => setTooltip(response.data.body))
         .catch();
     }, []);
-    const pallet = tooltip[tooltip.findIndex(data => data.id === props.tooltipId)];
+    const pallet = tooltip[tooltip.findIndex(data => data.id === tooltipId)];
     if(pallet == undefined){return <></>;}
-    const postFeedback = (e:any)=>{
-        const target = e.currentTarget.getAttribute('data-tooltipId')
-        axios.post('http://localhost:3100/tooltip',{
-            feedback_id:target
+    const postFeedback = (feedbackId:number,tooltipId:number)=>{
+        axios.post(`${API_URL}tooltip/feedback`,{
+            feedback_id:feedbackId
         })
+        .then(()=>{hideTooltip(tooltipId)})
         .catch();
     }
-    const style = css`
-        ${isVisible?'visibility: visible;':'visibility: hidden;'}
-    `;
+    const hideTooltip = (tooltipId:number)=>{
+        const elem = document.querySelector(`.tooltip${tooltipId}`);
+        if(elem){elem.style.display="none"}
+      }
     return(
-        <div css={style}
-             className="tooltip" id={`tip`+String(props.tooltipId)} 
+        <div style={{display:'none'}}
+             className={`tooltip tooltip${tooltipId}`}
             >
-            <span className="close" onClick={hideTooltip}></span>
+            <span className="close" onClick={()=>hideTooltip(tooltipId)}></span>
             <dl>
                 <dt>{pallet.word}</dt>
                 <dd>{pallet.description}</dd>
@@ -82,8 +64,7 @@ function Tooltip(props:Props){
                             return <input key={box.feedback_id}
                                           value={box.feedback_name}
                                           type="button"
-                                          data-id={box.feedback_id}
-                                          onClick={postFeedback}
+                                          onClick={()=>postFeedback(box.feedback_id,tooltipId)}
                                     />
                                 })
                     }
@@ -92,4 +73,4 @@ function Tooltip(props:Props){
         </div>
     )
 }
-export default Tooltip;
+// export default Tooltip;

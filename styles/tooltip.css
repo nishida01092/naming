@@ -5,6 +5,8 @@
     border-radius:30px;
     background-color: white;
     padding:30px 20px 15px;
+    z-index:2;
+    transform: translateY(60%);
 }
 #naming .tooltip dt{
     font-size:2.4rem;
@@ -40,7 +42,6 @@
     justify-content: space-between;
 }
 #naming .tooltip input{
-    /* width: calc(50% - 20px); */
     min-width: calc(50% - 20px);
     margin:0 0 10px 0;
     border:1px solid #696969;
@@ -76,4 +77,10 @@
    
   .close::after {
     transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  .tooltipWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }

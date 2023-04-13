@@ -82,12 +82,16 @@ section>dl>dd>dl>dd{
 .naming .notice,
 .naming .schedule,
 .naming .posting{
+    position: relative;
     margin:0 15px 40px;
     padding: 30px 18px;
     text-shadow: 2px 2px 20px #fff, -2px -2px 1px #fff, 2px 1px 1px #fff, -2px -1px 1px #fff, 2px 0 1px #fff, -2px 0 1px #fff, 2px -1px 1px #fff, -2px 1px 1px #fff, 1px 2px 1px #fff, -1px -2px 1px #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, 1px 0 1px #fff, -1px 0 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px -2px 1px #fff, -1px 2px 1px #fff, 0 -2px 1px #fff, 0 2px 1px #fff, 0 -1px 1px #fff, 0 1px 1px #fff;
 }
 .naming .notice{
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     position: relative;
     padding:150px 18px  20px 18px;
     text-align:center;
@@ -133,6 +137,7 @@ footer{
     clip-path: polygon(0 0,100% 20px,100% 100%,0 100%,0 100%);
 }
 .tipIcon{
+    font-size:1.6rem;
     display: inline-block;
     background-color: #dffffd;
     width: 2.5rem;
@@ -141,3 +146,12 @@ footer{
     border-radius: 50%;
     cursor: pointer;
 }
+/* h2 .tipIcon{
+    display: inline-block;
+    background-color: #dffffd;
+    width: 4rem;
+    line-height: 1.5em; 
+    text-align: center;  
+    border-radius: 50%;
+    cursor: pointer;
+} */
