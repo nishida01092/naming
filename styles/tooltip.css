@@ -1,0 +1,86 @@
+#naming .tooltip{
+    position: absolute;
+    text-align: left;
+    border:2px solid #BDFFFF;
+    border-radius:30px;
+    background-color: white;
+    padding:30px 20px 15px;
+    z-index:2;
+    transform: translateY(60%);
+}
+#naming .tooltip dt{
+    font-size:2.4rem;
+    margin:0 0 10px 0;
+}
+#naming .tooltip dl{
+    padding:0 0 25px 0;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0 0 18px 0;
+    border-bottom: dotted 3px #696969;
+}
+#naming .tooltip div{
+    display: flex;
+    flex-wrap: wrap;
+}
+#naming .tooltip p{
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    padding:0;
+    margin:0 0 10px 0;
+    flex-basis: 100%;
+    
+}
+#naming .tooltip form{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    flex-basis: 80%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+#naming .tooltip input{
+    min-width: calc(50% - 20px);
+    margin:0 0 10px 0;
+    border:1px solid #696969;
+    color:#696969;
+    border-radius:20px;
+    padding:10px;
+}
+#naming .tooltip .close{
+    right: -8px;
+    top: 0px;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff; /* 枠の調整 */
+    border-radius: 50%;  /* 丸みの度合い */
+    background: #37cbcb; /* ボタンの背景色 */
+    cursor: pointer;
+}
+.close::before, .close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px; /* 棒の幅（太さ） */
+    height: 22px; /* 棒の高さ */
+    background: #fff; /* バツ印の色 */
+  }
+   
+  .close::before {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+   
+  .close::after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  .tooltipWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }

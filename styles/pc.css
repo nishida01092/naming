@@ -1,0 +1,9 @@
+@media screen and (min-width:550px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+    html{
+        background-color: #ffa09d;
+    }
+    #naming{
+        width:375px;
+    }
+}

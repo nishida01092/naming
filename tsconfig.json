@@ -13,8 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
     "incremental": true,
-    "types": ["@emotion/react/types/css-prop"],
+    "types": ["typed-query-selector"],
     "paths": {
       "@/*": ["./*"]
     }
