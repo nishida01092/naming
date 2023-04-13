@@ -3,6 +3,10 @@ import Image from 'next/image'
 import {Tooltip} from '../components/elements/tooltip/Tooltip'
 import { useState } from 'react'
 import { Tweet } from '@/components/elements/twitter/Tweet'
+import top from '../public/img_top.png'
+import banner from '../public/img_banner01.png'
+import unknown from '../public/img_unknown.png'
+
 
 export default function Home() {
   const showTooltip = (tooltipId:number)=>{
@@ -23,7 +27,7 @@ export default function Home() {
         <main>
           <section className="top">
             <Image
-              src="/../public/img_top.png"
+              src={top}
               layout="responsive"
               width={375}
               height={451}
@@ -32,7 +36,7 @@ export default function Home() {
           </section>
           <section className="banner">
             <Image
-              src="/../public/img_banner01.png"
+              src={banner}
               width={282}
               height={79}
               alt="banner"
@@ -40,7 +44,7 @@ export default function Home() {
           </section>
           <section className="notice">
             <Image
-              src="/../public/img_unknown.png"
+              src={unknown}
               width={250}
               height={250}
               alt="unknown"
